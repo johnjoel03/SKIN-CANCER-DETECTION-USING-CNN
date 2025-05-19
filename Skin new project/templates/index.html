@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Body styles */
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+       
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Header styles */
+    header {
+        background-color: blue;
+        color: #fff;
+        padding: 20px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-right: 20px;
+    }
+
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+        color: red;
+    }
+
+    /* Main content styles */
+   
+
+    h1 {
+        text-align: center;
+        margin: 40px 0;
+        color: white;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 0;
+        color:white;
+    }
+
+    input[type="file"] {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+
+    }
+
+    button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    /* Footer styles */
+    footer {
+        background-color:blue;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .container{
+        height:100vh;
+        width:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-image: url('https://plugins-media.makeupar.com/smb/blog/post/2021-01-28/6b977c6b-80ca-4b06-b605-106638166ae5.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+
+    }
+    .innerContainer{
+        width:50%;
+        height:40%;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        background-color:rgb(0,0,0,0.8);
+        color:white;
+        border-radius: 0.5rem;
+    }
+</style>
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <i class="fa-solid fa-spray-can-sparkles"></i>
+            DermAI
+          </div>
+          <ul class="nav-links">
+            <li><i class="fa-solid fa-house"></i><a href="/"> Home</a></li>
+            <li><i class="fa-solid fa-upload"></i><a href="/upload"> Upload</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="container">
+        <div class="innerContainer">
+    <h1>Upload an image</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Upload</button>
+    </form>
+</div>
+</div>
+
+    <footer>
+        <p style="color:white">&copy; 2024 Skin Disease Classification Project. All rights reserved.</p>
+      </footer>
+    
+</body>
+</html>
